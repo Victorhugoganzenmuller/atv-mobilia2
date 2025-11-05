@@ -1,146 +1,288 @@
+ /*
+  ===========================================
+  Geral
+  ===========================================
+  */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 :root {
-  --main-bg-color: #f5f5f5;
-  font-size: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
-  font-family: "Montserrat", sans-serif;
-}
+    --main-bg-color: #F5F5F5;
+    font-size: clamp(0.9375rem, calc(0.9119rem + 0.1536vw), 4rem);
+    font-family: "Montserrat", sans-serif;
+  }
+  a{
+      text-decoration: none; /* remove o sublinhado dos links */
+      color: black; /* altera a cor de todos os links das páginas */
+  }
 
-a {
-  text-decoration: none;
-  /* remove o sublinhado dos links */
-  color: black;
-  /* altera a cor de todos os links das páginas */
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto", sans-serif;
-}
 
-body {
-  background-color: var(--main-bg-color);
-}
+  body {
+    background-color: var(--main-bg-color);
+    
+  }
 
-/*///////////////Header///////////////*/
-header nav {
-  display: flex;
-  justify-content: center;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+  }
 
-header nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  border: 2px solid #e5e5e5;
-  margin: 2vw 0 0 0;
-  align-items: center;
-  border-radius: 30px;
-  padding: 3px;
-}
 
-header nav ul li a {
-  padding: 10px 20px;
-  border-radius: 20px;
-  display: block;
-}
+  /*
+  ===========================================
+  Header
+  ===========================================
+  */
 
-header nav ul li a.atual {
-  padding: 10px 20px;
-  border-radius: 20px;
-  display: block;
-  background-color: black;
-  color: white;
-}
+  header nav {
+    display: flex ;
+    justify-content: center;
+  }
+  header nav ul {
+    display: flex;
+    gap: 30px;
+    border: 2px solid #E5E5E5;
+    border-radius: 200px;
+    align-items: center;
+    margin: 2vw 0 1vw 0;
+  }
+  header nav ul li p a.atual {
+    padding: 10px 20px 10px 20px;
+    background-color: #1E1E1E;
+    color: white;
+    border-radius: 20px;
+    display: block;
+    margin: 5px 5px 5px 5px;
+  }
+  header nav ul li p a{
+    padding: 10px 20px 10px 20px;
+    display: block;
+  }
 
-/*===Banner===*/
+  
+  /*
+  =====================================
+  Banner
+  =====================================
+  */
+  
+  section.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin: 5vw auto 0 auto;
+    width: 80%;
+    max-width: 1000px;
+    align-items: first baseline;
+  }
 
-section.banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 5vw auto 5vw auto;
-  width: 80%;
-  max-width: 800px;
-}
+  section.banner h1 {
+    font-size: 3rem;
+    /*width: 50%;*/
+  }
+  section.banner h1 span {
+    font-weight: bold;
+    font-size: 3.1rem;
+  }
+  section.banner p {
+    font-size: 1.3rem;
+    color: #5A5A5A;
+    line-height: 40px;
+  }
 
-section.banner h1 span {
-  font-weight: bold;
-  font-size: 3.1rem;
-}
+  /*
+  ====================================
+  Posts
+  ====================================
+  */
 
-section.banner p {
-  font-size: 1.3rem;
-  color: #5a5a5a;
-}
+  section.posts {
+    margin: 5vw auto 0 auto;
+    width: 80%;
+    max-width: 1000px;
+  }
+  section.posts > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 
-section.banner h1 {
-  font-size: 2.2rem;
-}
+  section.posts > ul > li {
+    background-color: #FFFFFE;
+    border-radius: 15px;
+    padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+    border: 2px   solid  #E5E5E5;
+    box-shadow: 1px 1px 4px #cacaca;
+  }
+  section.posts > ul > li h2 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin: 0 0 1.3vw 0;
+    color: #1E1E1E;
+  }
+  section.posts > ul > li p {
+    color: #757575;
+    line-height: 20px;
+  }
+  section.posts > ul > li ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  section.posts > ul > li ul li {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    color: #1E1E1E;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    font-size: 0.9rem;
+    margin: 10px 0 0 0;
+  }
 
-/*====Posts====*/
+  /*
+  ========================================
+  Footer
+  ========================================
+  */
+  footer {
+    margin: 5vw auto 0 auto;
+    width: 80%;
+    max-width: 1000px;
+  }
+  footer p {
+    color: #7C7C7C;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 0 20px 0;
+    margin: 60px 0 20vw 0;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #cacaca;
+  }
 
-section.posts {
-  margin: 5vw auto 0vw auto;
-  width: 80%;
-  max-width: 1000px;
-}
 
-section.posts>ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
+  /*
+  =================================================================
+  =================================================================
+  Projects
+  =================================================================
+  =================================================================
+  */
 
-section.posts>ul>li {
-  background-color: #ffff;
-  border-radius: 20px;
-  padding: 1.5vw 1.5vw 1.5vw 1.5vw;
-  border: 2px solid #e5e5e5;
-  box-shadow: 1px 1px 4px rgb(128, 115, 115);
-}
+  /*
+  ===============================================
+  Projects Posts
+  ===============================================
+  */
 
-section.posts>ul>li h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
 
-section.posts>ul>li p {
-  line-height: 1.5rem;
-}
+  section.postsProjects {
+    margin: 5vw auto 0 auto;
+    width: 80%;
+    max-width: 1000px;
+  }
 
-section.posts>ul>li ul {
-  display: flex;
-  gap: 20px;
-}
+  section.postsProjects > ul > li {
+    background-color: #FFFFFE;
+    border-radius: 15px;
+    padding: 2vw 2vw 2vw 2vw;
+    border: 2px   solid  #E5E5E5;
+    box-shadow: 1px 1px 4px #cacaca;
+    margin: 1vw 0 1vw 0;
+  }
+  section.postsProjects > ul > li h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 0 1.3vw 0;
+    color: #1E1E1E;
+  }
+  section.postsProjects > ul > li p {
+    color: #757575;
+    line-height: 20px;
+  }
+  section.postsProjects ul img {
+    margin: 10px 0 10px 0;
+  }
 
-section.posts>ul>li ul li {
-  background-color: #f5f5f5;
-  border-radius: 20px;
-  color: #1e1e1e;
-  font-weight: bold;
-  padding: 5px 10px 5px 10px;
-  font-size: 0.9rem;
-  margin: 10px 0 0 0;
-}
 
-/*/=/=Footer=/=/*/
+  /*
+  ================================
+  ================================
+  Contact
+  ================================
+  ================================
+  */
 
-footer {
-  margin: 5vw auto 0 auto;
-  width: 80%;
-  max-width: 1000px;
-}
-footer p {
-  color: #7c7c7c; 
-  background-color: white;
-  text-align: center;
-  border-radius: 20px;
-  padding: 20px 0 20px 0;
-  margin: 0 0 20vw 0;
-  border: 1px solid #c2c2c2;
-  box-shadow: 1px 1px 4px #cacaca;
-}
+  section.redes {
+    margin: 5vw auto 0 auto;
+    width: 80%;
+    max-width: 1000px;
+  }
+  section.redes ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  section.redes ul li a {
+    display: flex;
+    border: 2px solid #cacaca;
+    padding: 1vw 1vw 1vw 1vw;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+  }
+  
+
+
+
+  /*==Reseponsividade==*/
+
+  @media only screen and (max-width: 600px) {
+    header nav ul{
+      gap: 10px;
+    }
+    header nav ul li p a{
+      padding: 7px 15px 7px 15px;
+    }
+    
+    section.banner {
+      display: block;
+    }
+    section.banner h1{
+      margin: 0 0 3vw 0;
+
+    }
+    section.posts>ul {
+      display: block;
+      
+    }
+    section.posts>ul>li {
+      margin:30px 0 30px 0;
+      padding: 5vw 7vw 5vw 7vw;
+    }
+    section.posts>ul>li h2 {
+      margin: 0px 0 10px 10px;
+    }
+    section.posts > ul > li ul {
+      gap: 5px;
+    }
+    section.postsProjects ul li{
+      margin: 5vw 0 5vw 0;
+      padding: 6vw;
+
+    }
+    section.redes ul {
+      display: block;
+    }
+
+    section.redes ul li {
+      margin: 15px 0 15px 0;
+    }
+
+
+  }
